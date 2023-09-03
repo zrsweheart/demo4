@@ -1,0 +1,133 @@
+.top{
+    width: 995px;
+    margin: 0 auto;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    
+}
+.top .logo,.top h2{
+    float: left;
+    
+}
+/*欢迎登录标题*/
+.top h2 {
+    height: 60px; /*跟图片一样高*/
+    line-height: 60px; /*跟height一样，可以垂直居中*/
+    font-weight: normal;
+    color:#666666;
+    margin-left: 25px;
+}
+/*主体区域*/
+.main{
+  
+    height:510px;
+}
+.main-content{
+    width: 995px;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+/*登录的白盒子*/
+.login{
+    width:306px;
+    height:340px;
+    background-color: white;
+    float:right;
+    margin-top:40px;
+    padding: 23px 20px 20px 20px;
+}
+.login h2{
+    font-weight: normal;
+    color: #666666;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.login h2 span{
+    float:right;
+    font-size: 14px;
+    color: red;
+    padding-left: 22px;
+    background-image: url("images/5.png")no-repeat;
+}
+/*文本框样式*/
+.input{
+    border: 1px solid #BBDDBB;
+    width:305px;
+    height: 38px;
+    margin-top: 28px;
+}
+.input span{
+    float: left;
+    width:38px;
+    height:38px;
+    border-right: 1px solid #BBDDBB;
+}
+.input input{
+    float:right;
+    width: 256px;
+    height:38px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.input .user-name{
+    background-image: url("images/6.png");
+}
+.input .password{
+    background-image: url("images/7.png");
+}
+.login .auto-login{
+    font-size: 12px;
+    margin-top: 22px;
+}
+.login .auto-login a{
+    float: right;
+}
+.login .auto-login label span,.auto-login label input{
+    vertical-align: middle;
+}
+/*登录按钮*/
+.login .submit{
+    width: 305px;
+    height:30px;
+    background-color: #e75858;
+    font-size: 18px;
+    margin-top: 13px;
+}
+.login .submit a{
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+}
+/*底部区域*/
+.bottom{
+    width:995px ;
+    margin: 0 auto;
+    font-size: 12px;
+    padding-top: 22px;
+}
+.bottom ul{
+    /*overflow:hidden ;*/
+    text-align: center;
+    margin-bottom:12px;
+}
+.bottom ul li{
+    /*float: left;*/
+    display: inline-block;
+}
+.bottom p{
+    text-align: center;
+}
+/*超链接*/
+.bottom ul li a,.bottom ul li span ,.bottom p{
+    color:#666666;
+}
+bottom ul li span{
+    margin-left: 10px;
+    margin-right: 8px;
+}

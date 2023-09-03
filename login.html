@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <style type="text/css">
+
+   .Button {
+    width: 300px;
+    font-size: 15px;
+    color: black;
+   
+    
+    text-align: center;
+    background-color:#FF6A6A;
+    border-color: red;
+    border-width: 1px;
+}
+
+
+
+
+        .code
+        {
+            background-image:url(code.jpg);
+            font-family:Arial;
+            font-style:italic;
+            color:Red;
+            border:0;
+            padding:2px 3px;
+            letter-spacing:3px;
+            font-weight:bolder;
+        }
+
+        .unchanged
+        {
+           
+            border-color: #844200;
+    border-width: 1px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+ 
+ 
+
+
+    <script language="javascript" type="text/javascript">
+     var code ; //在全局 定义验证码
+     function createCode()
+     { 
+       code = "";
+       var codeLength = 4;//验证码的长度
+       var checkCode = document.getElementById("checkCode");
+       var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');//所有候选组成验证码的字符，当然也可以用中文的
+       for(var i=0;i<codeLength;i++)
+       {
+       var charIndex = Math.floor(Math.random()*36);
+       code +=selectChar[charIndex];
+       }
+       if(checkCode)
+       {
+         checkCode.className="code";
+         checkCode.value = code;
+       }
+     }
+      function validate ()
+     {
+         var inputCode = document.getElementById("input1").value;
+         if(inputCode.length <=0)
+         {
+             document.getElementById("yzm").innerText="请输入验证码！";
+             return false;
+         }
+         else if(inputCode != code )
+         {
+          document.getElementById("yzm").innerText="验证码输入错误！";
+            createCode();//刷新验证码
+            return false;
+         }
+
+         else
+         {
+            
+          window.location.href="login.php";//普通用户登录后网址
+         
+        }
+        
+       }
+    </script>
+    
+</head>
+<body  style="width:1520px;height:752px; background: url(4.jpg); background-size:contain ;text-align: center;">
+  <!--顶部-->
+  <div class="top">
+    
+      <h2 style="font-family:KaiTi">欢迎登录</h2>
+  </div>
+<!--    中间区域的主体，左右撑开-->
+    <div class="main">
+<!--居中的主体区域-->
+        <div class="main-content">
+<!-- 登录的白盒子-->
+            <div class="login">
+               <h2>橘子巷<span><a href="register.html" style="color=#e75858">立即注册</a></span></h2>
+
+                
+                            <div class="panel-body">
+                                <form method="post" action="login.php">
+                                    <div class="form-group">
+                                        用户名：
+                                        <input type="text"  id="name" name="name" placeholder="用户名"required placeholder autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        密&nbsp;&nbsp;&nbsp;&nbsp;码：
+                                        <input type="password"  id="password" name="password" placeholder="密码">
+                                    </div>
+                                  
+                                    <div>
+                                     验证码：  <input  type="text"   id="input1" placeholder="此项必填哦"/></div>
+                                       <div>
+    <input type="text" onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="width: 80px"  />
+<div>
+    <label id="yzm" style="color:red;margin-left:15px"></label>
+                                    </div>
+
+                <div class="auto-login">
+                    <label><input type="checkbox"><span>自动登录</span></label>
+                    
+                </div>
+             
+                 
+                <div>
+     <input id="Button1"  onclick="console.log(validate())" class="Button" type="submit" value="登录" />
+     </div>
+                 <div class="auto-login">
+                    <label><span><a href="gllogin.html" style="float: left">管理员？</a></span></label>
+                    <a href="main.php">游客？</a>
+                </div> 
+                   
+
+                
+            </div>
+          </form>
+        </div>
+    </div>
+      </div>
+    </div>
+<!--    居中的底部盒子-->
+    <div class="bottom">
+    <ul>
+        <li><a herf="">关于我们</a><span |></span></li>
+        <li><a herf="">联系我们</a><span |></span></li>
+        <li><a herf="">人才招聘</a><span |></span></li>
+        <li><a herf="">商家入驻</a><span |></span></li>
+        <li><a herf="">广告服务</a><span |></span></li>
+        <li><a herf="">手机京东</a><span |></span></li>
+        <li><a herf="">友情链接</a><span |></span></li>
+        <li><a herf="">销售联盟</a><span |></span></li>
+        <li><a herf="">橘子社区</a><span |></span></li>
+        <li><a herf="">橘子公益</a><span |></span></li>
+        <li><a herf="">English Site</a><span |></span></li>
+    </ul>
+    <p>
+        Copyright&copy;石家庄铁道大学
+    </p>
+</div>
+</body>
+</html>
+ 
